@@ -1,8 +1,7 @@
 <script setup xmlns="">
 import ItemBox from './components/ItemBox.vue'
 
-// 设置随机背景
-document.body.style.backgroundImage = `url(src/assets/background/bg${1 + Math.floor(Math.random() * 6)}.webp)`;
+document.body.style.backgroundImage = `url(img/background/bg${1 + Math.floor(Math.random() * 6)}.webp)`;
 </script>
 
 <template>
