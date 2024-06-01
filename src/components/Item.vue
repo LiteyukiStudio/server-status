@@ -1,39 +1,41 @@
 <script setup>
+
+const props = defineProps({
+  item: Object,
+})
+
 </script>
 
 <template>
   <div class="item">
-    <div class="item-name">Jiulongpo A1</div>
+    <div class="nav-bar" style="display: flex; align-items: center">
+      <div class="status-icon" :style="{backgroundColor: item['color']}"></div>
+      <div class="item-name">{{item['name']}}</div>
+    </div>
     <div class="item-content">
-      <div class="item-content-item">
-        <div class="item-content-item-name">CPU</div>
-        <div class="item-content-item-value">Xeon E5-2678 v3</div>
-      </div>
-      <div class="item-content-item">
-        <div class="item-content-item-name">RAM</div>
-        <div class="item-content-item-value">64GB</div>
-      </div>
-      <div class="item-content-item">
-        <div class="item-content-item-name">Disk</div>
-        <div class="item-content-item-value">1TB</div>
-      </div>
-      <div class="item-content-item">
-        <div class="item-content-item-name">Network</div>
-        <div class="item-content-item-value">1Gbps</div>
-      </div>
     </div>
   </div>
   <!--  网格区域-->
 </template>
 
 <style scoped>
+
+.status-icon {
+  border-radius: 50%;
+  height: 20px;
+  aspect-ratio: 1;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .item {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  max-height: 200px;
-  width: 200px;
+  height: 100%;
+  width: 100%;
 }
 
 .item-name {
@@ -42,9 +44,7 @@
 }
 
 .item-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
+
 }
 
 .item-content-item {

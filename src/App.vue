@@ -1,7 +1,29 @@
 <script setup xmlns="">
 import ItemBox from './components/ItemBox.vue'
+import {h, ref} from "vue";
 
-document.body.style.backgroundImage = `url(img/background/bg${1 + Math.floor(Math.random() * 6)}.webp)`;
+let bg = `url(img/background/bg${1 + Math.floor(Math.random() * 6)}.webp)`
+// 修改#app的背景
+document.getElementById('app').style.backgroundImage = bg;
+// 修改body背景 + 模糊
+document.body.style.backgroundImage = bg;
+document.body.style.backgroundSize = 'cover';
+document.body.style.backgroundAttachment = 'fixed';
+document.body.style.backgroundPosition = 'center';
+document.body.style.backgroundRepeat = 'no-repeat';
+document.body.style.backdropFilter = 'blur(10px)';
+
+let data = ref([]);
+
+fetch('test_source.json')
+    .then(response => response.json())
+    .then(jsonData => {
+          jsonData.forEach(element => {
+            // 添加ItemBox，遍历element.children添加Item
+            data.value = jsonData
+          });
+        }
+    )
 </script>
 
 <template>
@@ -11,24 +33,15 @@ document.body.style.backgroundImage = `url(img/background/bg${1 + Math.floor(Mat
            src="https://cdn.liteyuki.icu/static/img/liteyuki_icon_640.png" height="100%"
            style="aspect-ratio: 1/1;"/>
     </div>
-    <div class="title">Liteyuki Status</div>
+    <div class="title">Liteyuki Status 后端开发中，此处仅为展示数据...</div>
   </div>
-  <item-box/>
-  <item-box/>
+  <ItemBox v-for="itemBox in data" :key="itemBox.name" :name="itemBox.name" :items="itemBox.children"/>
 </template>
 <style scoped>
-:root{
-  card-bg-color: rgba(255, 255, 255, 0.8);
-}
+
 
 header {
   line-height: 1.5;
-}
-
-body {
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-position: center;
 }
 
 .nav-bar {
@@ -41,6 +54,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 60px;
   backdrop-filter: blur(10px);
+  margin-bottom: 20px;
 }
 
 .nav-bar .logo {
@@ -48,24 +62,13 @@ body {
   display: inline-block;
 }
 
-.nav-bar .logo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://cdn.liteyuki.icu/static/img/liteyuki_icon_640.png') no-repeat;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 .nav-bar .title {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-
-@media (min-width: 1024px) {
-
+@media (min-width: 600px) {
+  .nav-bar {
+  }
 }
 </style>

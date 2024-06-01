@@ -1,24 +1,36 @@
 <script setup>
 import Item from "@/components/Item.vue";
+
+const props = defineProps({
+  name: String,
+  items: Array,
+})
+
+console.log(props.name)
+
 </script>
 
 <template>
-
-  <!--  网格区域-->
+<!--  网格-->
   <div class="class-div">
+
     <div class="box-name">
-      Virtual Machine
+      {{ name }}
     </div>
     <div class="grid-container">
-      <item/>
-      <item/>
-      <item/>
-      <item/>
+      <Item v-for="item in items" :key="item.name" :item="item"/>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+item-box {
+  justify-content: center;
+  align-items: center;
+}
+
+
 .class-div {
   padding: 20px;
   margin-top: 30px;
@@ -29,9 +41,18 @@ import Item from "@/components/Item.vue";
 }
 
 .grid-container {
+  justify-items: center;
+  align-items: center;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-auto-rows: var(--grid-height);
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 
 .box-name {

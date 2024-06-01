@@ -1,6 +1,7 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --card-c: rgba(255, 255, 255, 0.8);
+  --grid-height: 200px;
 
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
