@@ -1,0 +1,108 @@
+[
+  {
+    "name": "服务主机列表",
+    "children": [
+      {
+        "type": "item",
+        "name": "中邮信科交换机",
+        "status": "online",
+        "color": "#1fd041",
+        "prop": [
+          {
+            "name": "location",
+            "value": "南岸-中邮信科数据中心"
+          }
+        ]
+      },
+      {
+        "type": "item",
+        "name": "渝北-王家庄-A1",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "璧山-95服务器",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "璧山-96服务器",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "轻雪数据中心交换机",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "网络储存器",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "香港-代理",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "东京-代理",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "加利福尼亚-代理",
+        "status": "online",
+        "color": "#1fd041"
+      }
+    ]
+  },
+  {
+    "name": "服务列表",
+    "children": [
+      {
+        "type": "item",
+        "name": "轻雪API",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "Liteyuki Server",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "Liteyuki Lab",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "SnowyKami Blog",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "MySQL Server",
+        "status": "online",
+        "color": "#1fd041"
+      },
+      {
+        "type": "item",
+        "name": "数据中心 Cloudreve",
+        "status": "online",
+        "color": "#1fd041"
+      }
+    ]
+  }
+]
