@@ -1,8 +1,5 @@
 <script setup xmlns="">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import ItemBox from './components/ItemBox.vue'
-import Item from './components/Item.vue'
 
 // 设置随机背景
 document.body.style.backgroundImage = `url(src/assets/background/bg${1 + Math.floor(Math.random() * 6)}.webp)`;
