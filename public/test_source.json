@@ -4,18 +4,6 @@
     "children": [
       {
         "type": "item",
-        "name": "中邮信科交换机",
-        "status": "online",
-        "color": "#1fd041",
-        "prop": [
-          {
-            "name": "location",
-            "value": "南岸-中邮信科数据中心"
-          }
-        ]
-      },
-      {
-        "type": "item",
         "name": "渝北-王家庄-A1",
         "status": "online",
         "color": "#1fd041"
