@@ -1,96 +1,114 @@
 [
-  {
-    "name": "服务主机列表",
-    "children": [
-      {
-        "type": "item",
-        "name": "渝北-王家庄-A1",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "璧山-95服务器",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "璧山-96服务器",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "轻雪数据中心交换机",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "网络储存器",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "香港-代理",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "东京-代理",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "加利福尼亚-代理",
-        "status": "online",
-        "color": "#1fd041"
-      }
-    ]
-  },
-  {
-    "name": "服务列表",
-    "children": [
-      {
-        "type": "item",
-        "name": "轻雪API",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "Liteyuki Server",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "Liteyuki Lab",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "SnowyKami Blog",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "MySQL Server",
-        "status": "online",
-        "color": "#1fd041"
-      },
-      {
-        "type": "item",
-        "name": "数据中心 Cloudreve",
-        "status": "online",
-        "color": "#1fd041"
-      }
-    ]
-  }
+    {
+        "name": "服务主机列表",
+        "children": [
+            {
+                "type": "item",
+                "name": "渝北-王家庄-A1",
+                "status": "online",
+                "color": "#1fd041",
+                "hardware": {
+                    "cpu": {
+                        "usage": 0.1,
+                        "cores": 8,
+                        "threads": 16,
+                        "temperature": 40
+                    },
+                    "memory": {
+                        "usage": 0.2,
+                        "used": 6871947673,
+                        "total": 34359738368
+                    },
+                    "swap": {
+                        "usage": 0.2,
+                        "used": 6871947673,
+                        "total": 34359738368
+                    }
+                }
+            },
+            {
+                "type": "item",
+                "name": "璧山-95服务器",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "璧山-96服务器",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "轻雪数据中心交换机",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "网络储存器",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "香港-代理",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "东京-代理",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "加利福尼亚-代理",
+                "status": "online",
+                "color": "#1fd041"
+            }
+        ]
+    },
+    {
+        "name": "服务列表",
+        "children": [
+            {
+                "type": "item",
+                "name": "轻雪API",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "Liteyuki Server",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "Liteyuki Lab",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "SnowyKami Blog",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "MySQL Server",
+                "status": "online",
+                "color": "#1fd041"
+            },
+            {
+                "type": "item",
+                "name": "数据中心 Cloudreve",
+                "status": "online",
+                "color": "#1fd041"
+            }
+        ]
+    }
 ]
