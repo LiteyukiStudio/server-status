@@ -1,5 +1,5 @@
 <script setup>
-import Item from "@/components/Item.vue";
+import Host from "@/components/items/Host.vue";
 
 const props = defineProps({
   name: String,
@@ -16,7 +16,7 @@ const props = defineProps({
       {{ name }}
     </div>
     <div class="grid-container">
-      <Item v-for="item in items" :key="item.name" :item="item"/>
+      <Host v-for="item in items" :key="item.name" :item="item"/>
     </div>
   </div>
 </template>
