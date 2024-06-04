@@ -16,7 +16,6 @@ onMounted(async function () {
   // if (!cpuChartRef.value || !memoryChartRef.value || !diskChartRef.value) {
   //   return;
   // }
-  console.log(cpuChartRef.value, memoryChartRef.value, diskChartRef.value);
   let cpuChart = echarts.init(cpuChartRef.value);
   let memoryChart = echarts.init(memoryChartRef.value);
   let diskChart = echarts.init(diskChartRef.value);
