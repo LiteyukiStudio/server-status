@@ -6,8 +6,6 @@ const props = defineProps({
   items: Array,
 })
 
-console.log(props.name)
-
 </script>
 
 <template>

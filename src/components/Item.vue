@@ -1,8 +1,40 @@
 <script setup>
 
+import {onMounted, ref} from "vue";
+import {CanvasRenderer} from 'echarts/renderers';
+import {use} from 'echarts/core'
+import {PieChart} from 'echarts/charts'
+import {TooltipComponent, LegendComponent} from 'echarts/components'
+import VChart from 'vue-echarts'
+
 const props = defineProps({
   item: Object,
 })
+
+
+use(
+    [CanvasRenderer, PieChart, TooltipComponent, LegendComponent]
+)
+
+const chartOptions = ref({
+  series: [
+    {
+      name: 'info',
+      type: 'pie',
+      radius: ['80%', '100%'],
+      center: ['50%', '50%'],
+      data: [
+        {value: 50, name: 'Used'},
+        {value: 50, name: 'Empty'}
+      ]
+    }
+  ]
+})
+// echarts
+onMounted(() => {
+
+})
+
 
 </script>
 
@@ -10,15 +42,37 @@ const props = defineProps({
   <div class="item">
     <div class="nav-bar" style="display: flex; align-items: center">
       <div class="status-icon" :style="{backgroundColor: item['color']}"></div>
-      <div class="item-name">{{item['name']}}</div>
+      <div class="item-name">{{ item['name'] }}</div>
     </div>
     <div class="item-content">
+      <div class="hardware-info">
+        <VChart class="usage-chart cpu-chart" :options="chartOptions"/>
+        <VChart class="usage-chart memory-chart" :options="chartOptions"/>
+        <VChart class="usage-chart disk-chart" :options="chartOptions"/>
+      </div>
+      <div class="detail-info">
+        <div class="item-content-item" v-for="detail in item['details']">
+          <div class="item-content-item-name">{{ detail['name'] }}</div>
+          <div class="item-content-item-value">{{ detail['value'] }}</div>
+        </div>
+      </div>
     </div>
   </div>
   <!--  网格区域-->
 </template>
 
 <style scoped>
+
+.usage-chart {
+  height: 50px;
+  width: 50px;
+}
+
+.hardware-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .status-icon {
   border-radius: 50%;
